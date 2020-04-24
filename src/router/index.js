@@ -1,19 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import orgTree from '@/views/orgTree'
-import toPage from '@/views/toPage'
-import apple from '@/views/apple'
+// import orgTree from '@/views/orgTree'
+// import toPage from '@/views/toPage'
+// import apple from '@/views/apple'
+import cartoon from '@/views/cartoon'
 
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
   routes: [
-    {
-      path: '/',
-      name: 'orgTree',
-      component: orgTree
-    },{
+    /*{
       path: '/shop/search/airpurifier/pro/filter',
       name: 'toPage',
       component: toPage
@@ -21,6 +18,14 @@ export default new Router({
       path: '/apple',
       name: 'apple',
       component: apple
+    },{
+      path: '/cartoon',
+      name: 'cartoon',
+      component: cartoon
+    },*/{
+      path: '/',
+      name: 'cartoon',
+      component: cartoon
     }
   ]
 })

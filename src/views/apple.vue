@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div class="apple_container">
     <div class="div01">
       <div class="player-main">
         <video id="videoPlayer1"
@@ -141,7 +141,15 @@
   }
 </script>
 <style lang='stylus' scoped>
-  .main
+  .apple_container{
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
+  .apple_container
     // height 5000px
     .div01
       position relative

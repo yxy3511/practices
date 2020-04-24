@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import $ from 'expose-loader?$!jquery'
 import store from './store'
+import 'assets/styl/index.styl'
 
 Vue.config.productionTip = false
 
@@ -14,5 +15,10 @@ new Vue({
   router,
   store,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  mounted(){
+    this.$nextTick(()=>{
+      document.dispatchEvent(new Event('custom-render-trigger'))
+    })
+  }
 })
