@@ -1,14 +1,17 @@
 <template>
   <div class="cartoon_container">
-    <div class="cartoon_music" @click='playMusic'>
-      <img src="//app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_music.png">
-      <audio
-        src="/static/cartoon/cartoon_bgmusic.mp3"
-        id="bgmusic"
-        loop
-        autoplay
-      ></audio>
-      <audio id="click-audio" src="/static/cartoon/cartoon_voice.mp3" style="display:none"></audio>
+    <div class="pos_fixed">
+      <div class="cartoon_music" @click='playMusic'>
+        <!-- <img src="//app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_music.png"> -->
+        <img src="//app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon_music.png">
+        <audio
+          src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon_bgmusic.mp3"
+          id="bgmusic"
+          loop
+          autoplay
+        ></audio>
+        <audio id="click-audio" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon_voice.mp3" style="display:none"></audio>
+      </div>
     </div>
     <div class="bg_div_imgs">
       <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_01.jpg">
@@ -67,6 +70,12 @@
         <span class="sing-com two"></span>
         <span class="sing-com three"></span>
       </div>
+      <div class="txt_content goup">继续向上滑 ⇡</div>
+    </div>
+    <div class="bg_div_imgs bg_buy">
+      <a href="https://m.tb.cn/h.V7bPoAb?sm=75424b">
+        <img src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon_buy.jpg">
+      </a>
     </div>
   </div>
 </template>
@@ -106,13 +115,24 @@
         // after.css('display', 'block')
         animation.css('display', 'none')
         let audio = $('#click-audio')[0]
-        audio.volume = 0.2
+        audio.volume = 0.005
         audio.play()
+        if(num == 5){
+          // let goup = $('.goup')[0]
+          // goup.style.animationPlayState = "running"
+          $('.goup').animate({opacity:1},5000)
+          $('.bg_buy').css('display', 'block')
+        }
       }
     }
   }
 </script>
 <style scoped lang='stylus'>
+$max-width = 677px
+.cartoon_container
+  // max-width 1024px
+  max-width $max-width
+  margin 0 auto
 img
   width 100%
   vertical-align bottom
@@ -120,13 +140,21 @@ img
 //   overflow hidden
 //   img
 //     float left
+.pos_fixed
+  position fixed
+  left 0
+  right 0
+  top 10px
+  display flex
+  justify-content center
+  padding-left calc(100vw*.86)
+  z-index 2
 .cartoon_music
-  position absolute
-  right 30px
-  top 40px
-  width 30px
-  height 30px
-  z-index 1
+  // position absolute
+  // right 20px
+  // top 20px
+  width 25px
+  height 25px
   animation: rotate 5s 0s infinite linear;
   animation-play-state: paused;
   &:hover
@@ -288,7 +316,8 @@ img
 
 .bg_div_01 .sing-com{
   // top: 28%;
-  top: calc(100vh*0.58)
+  // top: calc(100vh*0.58)
+  top: calc(100vw*1.02)
 }
 // .bg_div_01 .txt_content{
 //   top: 23%;
@@ -296,7 +325,8 @@ img
 
 .bg_div_02 .sing-com{
   // top: 31%;
-  top: calc(100vh*0.58)
+  // top: calc(100vh*0.58)
+  top: calc(100vw*1.05)
 }
 // .bg_div_02 .txt_content{
 //   top: 26%;
@@ -304,7 +334,8 @@ img
 
 .bg_div_03 .sing-com{
   // top: 43%;
-  top: calc(100vh*0.64)
+  // top: calc(100vh*0.64)
+  top: calc(100vw*1.15)
 }
 // .bg_div_03 .txt_content{
 //   top: 38%;
@@ -312,7 +343,8 @@ img
 
 .bg_div_04 .sing-com{
   // top: 52%;
-  top: calc(100vh*0.68)
+  // top: calc(100vh*0.68)
+  top: calc(100vw*1.2)
 }
 // .bg_div_04 .txt_content{
 //   top: 47%;
@@ -320,14 +352,45 @@ img
 
 .bg_div_14 .sing-com{
   // top: 7%;
-  top: calc(100vh*0.28)
+  // top: calc(100vh*0.28)
+  top: calc(100vw*.5)
 }
-// .bg_div_05 .txt_content{
-//   top: 47%;
-//   line-height: 32px;
-//   display: none;
-//   opacity: 0;
-//   animation: fadein 2s 1s ease-out;
-//   animation-fill-mode: forwards;
-// }
+.bg_div_14 .txt_content{
+  font-family HYRuiYiSongJ
+  position absolute
+  bottom 30px
+  color #9fa6ac
+  left 0
+  right 0
+  text-align center
+  opacity 0
+  // animation: fadein .5s linear;
+  // animation-fill-mode: forwards;
+  // animation-play-state: paused;
+}
+.bg_buy{
+  display none
+}
+@media screen and (min-width $max-width){
+  .pos_fixed {
+    padding-left calc(677px*.86)
+  }
+  .bg_div_01 .sing-com{
+    top: calc(677px*1.02)
+  }
+  .bg_div_02 .sing-com{
+    top: calc(677px*1.05)
+  }
+
+  .bg_div_03 .sing-com{
+    top: calc(677px*1.15)
+  }
+  .bg_div_04 .sing-com{
+    top: calc(677px*1.2)
+  }
+
+  .bg_div_14 .sing-com{
+    top: calc(677px*.5)
+  }
+}
 </style>

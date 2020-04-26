@@ -21,7 +21,7 @@
                 data-_top2='top:calc(0*100vw/2560);' 
                 data-_top2_end--600='top:calc(-550*100vw/2560);'
               >
-                <img alt='智米纯净型加湿器2' src="/static/scrollSnap//hum2_02.png">
+                <img alt='智米纯净型加湿器2' src="../assets/scrollSnap/hum2_02.png">
               </div>
               <div 
                 class="content" 
