@@ -1,78 +1,71 @@
 <template>
   <div class="cartoon_container">
     <div class="cartoon_music" @click='playMusic'>
-      <img src="/static/cartoon/music.png">
+      <img src="//app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_music.png">
       <audio
         src="/static/cartoon/cartoon_bgmusic.mp3"
-        id="audio"
+        id="bgmusic"
         loop
         autoplay
       ></audio>
+      <audio id="click-audio" src="/static/cartoon/cartoon_voice.mp3" style="display:none"></audio>
     </div>
-    <div class="bg_div bg_div_01">
-      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon01_bg_01.jpg">
-      <img class="bg_light bg_light_01" src="//app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon01_light_01.png">
-      <div class="animation_light" @click='changeTxt(1)'>
+    <div class="bg_div_imgs">
+      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_01.jpg">
+      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_02.jpg">
+      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_03.jpg">
+      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_04.jpg">
+      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_05.jpg">
+      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_06.jpg">
+    </div>
+    <div class="bg_div bg_div_01" @click='changeTxt(1)'>
+      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_07.jpg">
+      <img class="bg_light bg_light_01" src="//app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_light_07.jpg">
+      <div class="animation_light">
         <span class="sing-com one"></span>
         <span class="sing-com two"></span>
         <span class="sing-com three"></span>
       </div>
-      <div class="txt_content">
-        <div class="before">光是一座信仰</div>
-        <div class="after">“正因为我们在劫难逃，万物显得更美好了。”</div>
-      </div>
     </div>
-    <div class="bg_div bg_div_02">
-      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon01_bg_02.jpg">
-      <img class="bg_light bg_light_02" src="//app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon01_light_02.png">
-      <div class="animation_light" @click='changeTxt(2)'>
+    <div class="bg_div bg_div_02" @click='changeTxt(2)'>
+      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_08.jpg">
+      <img class="bg_light bg_light_02" src="//app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_light_08.jpg">
+      <div class="animation_light">
         <span class="sing-com one"></span>
         <span class="sing-com two"></span>
         <span class="sing-com three"></span>
       </div>
-      <div class="txt_content">
-        <div class="before">一段思绪</div>
-        <div class="after">“从前书信很慢，车马很远，一生只爱一个人。”</div>
-      </div>
     </div>
-    <div class="bg_div bg_div_03">
-      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon01_bg_03.jpg">
-      <img class="bg_light bg_light_03" src="//app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon01_light_03.png">
-      <div class="animation_light" @click='changeTxt(3)'>
+    <div class="bg_div bg_div_03" @click='changeTxt(3)'>
+      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_09.jpg">
+      <img class="bg_light bg_light_03" src="//app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_light_09.jpg">
+      <div class="animation_light">
         <span class="sing-com one"></span>
         <span class="sing-com two"></span>
         <span class="sing-com three"></span>
       </div>
-      <div class="txt_content">
-        <div class="before">一场艺术的交叠</div>
-        <div class="after">“每一个不曾起舞的日子，都是对生命的辜负。”</div>
-      </div>
     </div>
-    <div class="bg_div bg_div_04">
-      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon01_bg_04.jpg">
-      <img class="bg_light bg_light_04" src="//app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon01_light_04.png">
-      <div class="animation_light" @click='changeTxt(4)'>
+    <div class="bg_div bg_div_04" @click='changeTxt(4)'>
+      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_10.jpg">
+      <img class="bg_light bg_light_04" src="//app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_light_10.jpg">
+      <div class="animation_light">
         <span class="sing-com one"></span>
         <span class="sing-com two"></span>
         <span class="sing-com three"></span>
       </div>
-      <div class="txt_content">
-        <div class="before">一句出现在深夜里的诗歌</div>
-        <div class="after">“我们还年轻，长长的人生可以受一点风浪。”</div>
-      </div>
     </div>
-    <div class="bg_div bg_div_05">
-      <div class="animation_light" @click='changeTxt(5)'>
+    <div class="bg_div_imgs">
+      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_11.jpg">
+      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_12.jpg">
+      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_13.jpg">
+    </div>
+    <div class="bg_div bg_div_14" @click='changeTxt(5)'>
+      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_14.jpg">
+      <img class="bg_light bg_light_14" src="//app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_light_14.jpg">
+      <div class="animation_light">
         <span class="sing-com one"></span>
         <span class="sing-com two"></span>
         <span class="sing-com three"></span>
-      </div>
-      <video id='jya'>
-        <source src="//app-common.ks3-cn-beijing.ksyun.com/cartoon/jya_light.mp4" type="video/mp4">
-        <embed src="//app-common.ks3-cn-beijing.ksyun.com/cartoon/jya_light.mp4" type="video/mp4">
-      </video>
-      <div class="txt_content">
-        <div class="after">我独处时最轻松，<br/>因为我不觉得自己乏味，<br/>即使乏味，也自己承受，<br/>不累及他人，无需感到不安。</div>
       </div>
     </div>
   </div>
@@ -80,7 +73,8 @@
 <script>
   export default {
     mounted(){
-      let audio = document.querySelector('audio')
+      // let audio = document.querySelector('audio')[0]
+      let audio = $('#bgmusic')[0]
       let musicEle = $('.cartoon_music')[0]
       audio.addEventListener('play', function(){
         musicEle.style.animationPlayState = "running"
@@ -88,7 +82,8 @@
     },
     methods:{
       playMusic(){
-        let audio = document.querySelector('audio')
+        // let audio = document.querySelector('audio')[0]
+        let audio = $('#bgmusic')[0]
         let musicEle = $('.cartoon_music')[0]
         if(audio.paused){
           audio.play()
@@ -101,24 +96,30 @@
       },
       changeTxt(num){
         let animation = $($($('.bg_div')[num-1]).children('.animation_light'))
-        let parent = $($($('.bg_div')[num-1]).children('.txt_content'))
-        if(num != 5){
-          let light = $($($('.bg_div')[num-1]).children('.bg_light'))
-          let before = parent.children('.before')
-          before.css('display', 'none')
-          light.css('display', 'block')
-        }else{
-          $('#jya')[0].play()
-          parent.css('display', 'block')
-        }
-        let after = parent.children('.after')
-        after.css('display', 'block')
+        let light = $($($('.bg_div')[num-1]).children('.bg_light'))
+        if(light.css('display') == 'block' && animation.css('display') == 'none') return
+        // let parent = $($($('.bg_div')[num-1]).children('.txt_content'))
+        // let before = parent.children('.before')
+        // before.css('display', 'none')
+        light.css('display', 'block')
+        // let after = parent.children('.after')
+        // after.css('display', 'block')
         animation.css('display', 'none')
+        let audio = $('#click-audio')[0]
+        audio.volume = 0.2
+        audio.play()
       }
     }
   }
 </script>
 <style scoped lang='stylus'>
+img
+  width 100%
+  vertical-align bottom
+// .bg_div_imgs 
+//   overflow hidden
+//   img
+//     float left
 .cartoon_music
   position absolute
   right 30px
@@ -130,9 +131,12 @@
   animation-play-state: paused;
   &:hover
     cursor pointer
+  &:focus
+    outline none
   img
     width 100%
-    
+    &:focus
+      outline none
 @keyframes rotate{
   0% {
     transform rotate(0deg)
@@ -248,15 +252,15 @@
   font-size: 14px;
   position: relative;
 }
-.bg_div img.bg, video{
-  width: 100%;
-  display: block;
-}
-    
+// .bg_div img.bg, video{
+//   width: 100%;
+//   display: block;
+// }
+
 .bg_div .bg_light{
   display: none;
   opacity: 0;
-  animation: fadein 2s ease-out;
+  animation: fadein .5s linear;
   animation-fill-mode: forwards;
   width: 100%;
   position: absolute;
@@ -272,53 +276,58 @@
   display: none;
 }
     
-.bg_div .txt_content{
-  font-family: FZYanSJW_Xian;
-  position: absolute;
-  color: #fff;
-  top: 35%;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-    
+// .bg_div .txt_content{
+//   font-family: FZYanSJW_Xian;
+//   position: absolute;
+//   color: #fff;
+//   top: 35%;
+//   left: 0;
+//   right: 0;
+//   text-align: center;
+// }
+
 .bg_div_01 .sing-com{
-  top: 28%;
+  // top: 28%;
+  top: calc(100vh*0.58)
 }
-.bg_div_01 .txt_content{
-  top: 23%;
-}
+// .bg_div_01 .txt_content{
+//   top: 23%;
+// }
 
 .bg_div_02 .sing-com{
-  top: 31%;
+  // top: 31%;
+  top: calc(100vh*0.58)
 }
-.bg_div_02 .txt_content{
-  top: 26%;
-}
+// .bg_div_02 .txt_content{
+//   top: 26%;
+// }
 
 .bg_div_03 .sing-com{
-  top: 43%;
+  // top: 43%;
+  top: calc(100vh*0.64)
 }
-.bg_div_03 .txt_content{
-  top: 38%;
-}
+// .bg_div_03 .txt_content{
+//   top: 38%;
+// }
 
 .bg_div_04 .sing-com{
-  top: 52%;
+  // top: 52%;
+  top: calc(100vh*0.68)
 }
-.bg_div_04 .txt_content{
-  top: 47%;
-}
+// .bg_div_04 .txt_content{
+//   top: 47%;
+// }
 
-.bg_div_05 .sing-com{
-  top: 7%;
+.bg_div_14 .sing-com{
+  // top: 7%;
+  top: calc(100vh*0.28)
 }
-.bg_div_05 .txt_content{
-  top: 47%;
-  line-height: 32px;
-  display: none;
-  opacity: 0;
-  animation: fadein 2s 1s ease-out;
-  animation-fill-mode: forwards;
-}
+// .bg_div_05 .txt_content{
+//   top: 47%;
+//   line-height: 32px;
+//   display: none;
+//   opacity: 0;
+//   animation: fadein 2s 1s ease-out;
+//   animation-fill-mode: forwards;
+// }
 </style>

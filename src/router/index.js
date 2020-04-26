@@ -4,6 +4,7 @@ import Router from 'vue-router'
 // import toPage from '@/views/toPage'
 // import apple from '@/views/apple'
 import cartoon from '@/views/cartoon'
+import scrollSnap from '@/views/scrollSnap'
 
 Vue.use(Router)
 
@@ -26,6 +27,10 @@ export default new Router({
       path: '/',
       name: 'cartoon',
       component: cartoon
-    }
+    }/*, {
+      path: '/scrollSnap',
+      name: 'scrollSnap',
+      component: scrollSnap
+    }*/
   ]
 })
