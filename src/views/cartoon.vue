@@ -10,19 +10,19 @@
           loop
           autoplay
         ></audio>
-        <audio id="click-audio" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon_voice.mp3" style="display:none"></audio>
+        <audio id="click-audio" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon02_voied.mp3" style="display:none"></audio>
       </div>
     </div>
     <div class="bg_div_imgs">
-      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_01.jpg">
-      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_02.jpg">
-      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_03.jpg">
-      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_04.jpg">
-      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_05.jpg">
-      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_06.jpg">
+      <img class="bg" style="pointer-events: none;" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_01.jpg">
+      <img class="bg" style="pointer-events: none;" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_02.jpg">
+      <img class="bg" style="pointer-events: none;" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_03.jpg">
+      <img class="bg" style="pointer-events: none;" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_04.jpg">
+      <img class="bg" style="pointer-events: none;" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_05.jpg">
+      <img class="bg" style="pointer-events: none;" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_06.jpg">
     </div>
     <div class="bg_div bg_div_01" @click='changeTxt(1)'>
-      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_07.jpg">
+      <img class="bg" style="pointer-events: none;" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_07.jpg">
       <img class="bg_light bg_light_01" src="//app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_light_07.jpg">
       <div class="animation_light">
         <span class="sing-com one"></span>
@@ -31,7 +31,7 @@
       </div>
     </div>
     <div class="bg_div bg_div_02" @click='changeTxt(2)'>
-      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_08.jpg">
+      <img class="bg" style="pointer-events: none;" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_08.jpg">
       <img class="bg_light bg_light_02" src="//app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_light_08.jpg">
       <div class="animation_light">
         <span class="sing-com one"></span>
@@ -40,7 +40,7 @@
       </div>
     </div>
     <div class="bg_div bg_div_03" @click='changeTxt(3)'>
-      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_09.jpg">
+      <img class="bg" style="pointer-events: none;" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_09.jpg">
       <img class="bg_light bg_light_03" src="//app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_light_09.jpg">
       <div class="animation_light">
         <span class="sing-com one"></span>
@@ -49,7 +49,7 @@
       </div>
     </div>
     <div class="bg_div bg_div_04" @click='changeTxt(4)'>
-      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_10.jpg">
+      <img class="bg" style="pointer-events: none;" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_10.jpg">
       <img class="bg_light bg_light_04" src="//app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_light_10.jpg">
       <div class="animation_light">
         <span class="sing-com one"></span>
@@ -58,12 +58,12 @@
       </div>
     </div>
     <div class="bg_div_imgs">
-      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_11.jpg">
-      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_12.jpg">
-      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_13.jpg">
+      <img class="bg" style="pointer-events: none;" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_11.jpg">
+      <img class="bg" style="pointer-events: none;" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_12.jpg">
+      <img class="bg" style="pointer-events: none;" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_13.jpg">
     </div>
     <div class="bg_div bg_div_14" @click='changeTxt(5)'>
-      <img class="bg" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_14.jpg">
+      <img class="bg" style="pointer-events: none;" src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_bg_14.jpg">
       <img class="bg_light bg_light_14" src="//app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon06_light_14.jpg">
       <div class="animation_light">
         <span class="sing-com one"></span>
@@ -74,7 +74,7 @@
     </div>
     <div class="bg_div_imgs bg_buy">
       <a href="https://m.tb.cn/h.V7bPoAb?sm=75424b">
-        <img src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon_buy.jpg">
+        <img src="https://app-common.ks3-cn-beijing.ksyun.com/cartoon/cartoon02_buy.jpg">
       </a>
     </div>
   </div>
@@ -90,6 +90,11 @@
       })
     },
     methods:{
+      randomString(length, chars) {
+        var result = '';
+        for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
+        return result;
+      },
       playMusic(){
         // let audio = document.querySelector('audio')[0]
         let audio = $('#bgmusic')[0]
@@ -107,6 +112,9 @@
         let animation = $($($('.bg_div')[num-1]).children('.animation_light'))
         let light = $($($('.bg_div')[num-1]).children('.bg_light'))
         if(light.css('display') == 'block' && animation.css('display') == 'none') return
+        let audio = $('#click-audio')[0]
+        audio.volume = 0.005
+        audio.play()
         // let parent = $($($('.bg_div')[num-1]).children('.txt_content'))
         // let before = parent.children('.before')
         // before.css('display', 'none')
@@ -114,9 +122,6 @@
         // let after = parent.children('.after')
         // after.css('display', 'block')
         animation.css('display', 'none')
-        let audio = $('#click-audio')[0]
-        audio.volume = 0.005
-        audio.play()
         if(num == 5){
           // let goup = $('.goup')[0]
           // goup.style.animationPlayState = "running"
@@ -148,7 +153,7 @@ img
   display flex
   justify-content center
   padding-left calc(100vw*.86)
-  z-index 2
+  z-index 3
 .cartoon_music
   // position absolute
   // right 20px
@@ -356,9 +361,10 @@ img
   top: calc(100vw*.5)
 }
 .bg_div_14 .txt_content{
+  font-size 20px
   font-family HYRuiYiSongJ
   position absolute
-  bottom 30px
+  bottom 50px
   color #9fa6ac
   left 0
   right 0
