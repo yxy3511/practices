@@ -1,17 +1,22 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import orgTree from '@/views/orgTree'
-// import toPage from '@/views/toPage'
-// import apple from '@/views/apple'
+import orgTree from '@/views/orgTree'
+import toPage from '@/views/toPage'
+import apple from '@/views/apple'
 import cartoon from '@/views/cartoon'
-// import scrollSnap from '@/views/scrollSnap'
+import scrollSnap from '@/views/scrollSnap'
+import scrollStack from '@/views/scrollStack'
 
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
   routes: [
-    /*{
+    {
+      path: '/',
+      name: 'cartoon',
+      component: cartoon
+    },{
       path: '/shop/search/airpurifier/pro/filter',
       name: 'toPage',
       component: toPage
@@ -23,14 +28,14 @@ export default new Router({
       path: '/cartoon',
       name: 'cartoon',
       component: cartoon
-    },*/{
-      path: '/',
-      name: 'cartoon',
-      component: cartoon
-    }/*, {
+    },{
       path: '/scrollSnap',
       name: 'scrollSnap',
       component: scrollSnap
-    }*/
+    },{
+      path: '/scrollStack',
+      name: 'scrollStack',
+      component: scrollStack
+    }
   ]
 })
