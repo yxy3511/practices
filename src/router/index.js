@@ -6,6 +6,7 @@ import apple from '@/views/apple'
 import cartoon from '@/views/cartoon'
 import scrollSnap from '@/views/scrollSnap'
 import scrollStack from '@/views/scrollStack'
+import scrollPage from '@/views/scrollPage'
 
 Vue.use(Router)
 
@@ -14,7 +15,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'cartoon',
+      name: 'root',
       component: cartoon
     },{
       path: '/shop/search/airpurifier/pro/filter',
@@ -36,6 +37,10 @@ export default new Router({
       path: '/scrollStack',
       name: 'scrollStack',
       component: scrollStack
+    },{
+      path: '/scrollPage',
+      name: 'scrollPage',
+      component: scrollPage
     }
   ]
 })
