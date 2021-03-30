@@ -8,7 +8,6 @@
                end-length= '400'
                width="600"
                start-top='30'
-               end-top='280'
                preload
         >
             <source :src="mp4" type='video/mp4'>
@@ -26,7 +25,6 @@
                start-length='1500'
                end-length= '6000'
                start-top='30'
-               end-top = '860'
                width="600" 
                preload
         >
@@ -43,7 +41,10 @@
   </div>
 </template>
 <script>
+  // import { MyPlugin } from 'assets/js/parallaxScroll.js'
+  const MyPlugin = require('assets/js/parallaxScroll.js').MyPlugin
   export default {
+    props:['el'],
     data(){
       return {
         mp4: '//app-common.ks3-cn-beijing.ksyun.com/home_zhimi/d13aaeb750f789f1004be02f67f94103.mp4',
@@ -52,42 +53,17 @@
     },
     mounted(){
       this.$nextTick(()=>{
-        window.addEventListener('scroll', ()=>{
-          this.setAnimation()
+        // 方案一 引入js插件
+        let els = document.getElementsByClassName('player-video')
+        let parallax = new MyPlugin()
+        parallax.init(els)
+        // 方案二 
+        /*window.addEventListener('scroll', ()=>{
           this.initScroll()
-        })
+        })*/
       })
     },
     methods:{
-      setAnimation(){
-        let curTop = document.documentElement.scrollTop || document.body.scrollTop
-        let el = $('.v .txt')
-        let start = $('.v .player-video').attr('start-length')
-        let end = $('.v .player-video').attr('end-length')
-        if(curTop > start && curTop < end){
-          let fontSize = this.getNum(el.css('fontSize'))
-          let opacity = this.getNum(el.css('opacity'))
-          console.log('opacity--before:',el.css('opacity'))
-          let top = this.getNum(el.css('top'))
-          el.css('fontSize', fontSize++ + 'px')
-          el.css('top', top+1+'px')
-          if(opacity + 0.1 < 1 || opacity + 0.1 == 1){
-            console.log('opacity:',opacity)
-            console.log('res:', opacity + 0.1)
-            el.css('opacity', opacity + 0.1)
-          }
-          // el.animate({
-          //   'opacity': 0.4, 
-          //   'top': '25%',
-          //   'fontSize': '32px'
-          // },5000)
-        }
-      },
-      getNum(val){
-        let reg = /([0-9]{1,}(.([0-9]{1,}))?)[a-zA-Z]{0,}/
-        let res = reg.exec(val) ? reg.exec(val)[1] : null
-        return +res
-      },
       initScroll(){
         let els = document.getElementsByClassName('player-video')
         for(let el of els){

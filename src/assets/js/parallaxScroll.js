@@ -1,4 +1,9 @@
-
+/*
+1、元素外层要有player-main元素包裹
+start-length
+end-length
+start-top
+*/
 ;(function(global) {
     "use strict";
     var MyPlugin = function(options) {
@@ -25,7 +30,7 @@
             let offset = curTop - $(el).attr('scrollTop')
             if(pele.css('position') == 'sticky'){
               pele.css('position', 'relative')
-              let endTop = $(el).attr('end-top')
+              // let endTop = $(el).attr('end-top')
               // pele.css('top', offset > 0 ? endTop + 'px' : 0)
               pele.css('top', offset > 0 ? curTop-$(el).offset().top + 'px' : 0)
             }
