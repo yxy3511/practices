@@ -5,6 +5,7 @@ import apple from '@/views/apple'
 import cartoon from '@/views/cartoon'
 import scrollSnap from '@/views/scrollSnap'
 import scrollStack from '@/views/scrollStack'
+import canvasTest from '@/views/canvasTest'
 
 Vue.use(Router)
 
@@ -35,6 +36,10 @@ export default new Router({
       path: '/orgTree',
       name: 'orgTree',
       component: orgTree
+    },{
+      path: '/canvasTest',
+      name: 'canvasTest',
+      component: canvasTest
     }
   ]
 })
